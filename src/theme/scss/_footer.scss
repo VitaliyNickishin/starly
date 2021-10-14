@@ -1,0 +1,391 @@
+footer.main{
+  display: flex;
+  justify-content: flex-end;
+  height: 945px;
+  margin-top: 110px;
+  padding: 0;
+  background: url(../img/footer.jpg) 50% 50% no-repeat;
+  background-size: auto 100%;
+  @media screen and (max-width: 1200px) {
+    margin-top: 100px;
+    background-position: 0 50%;
+  }
+  @media screen and (max-width: 1024px) {
+    height: auto;
+    margin-top: 90px;
+    padding: 0 0 40px;
+  }
+  @media screen and (max-width: 920px) {
+    margin-top: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 70px;
+  }
+  @media screen and (max-width: 576px) {
+    margin-top: 60px;
+    padding: 0 0 30px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: 50px;
+    padding: 0 0 20px;
+  }
+  .info{
+    max-width: 1090px;
+    min-width: 1090px;
+    padding: 160px 0 0;
+    @media screen and (max-width: 1200px) {
+      max-width: 100%;
+      min-width: 100%;
+      padding: 140px 20px 0;
+    }
+    @media screen and (max-width: 1024px) {
+      padding: 120px 20px 0;
+    }
+    @media screen and (max-width: 920px) {
+      padding: 100px 20px 0;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 80px 20px 0;
+    }
+    @media screen and (max-width: 576px) {
+      padding: 60px 20px 0;
+    }
+    @media screen and (max-width: 480px) {
+      padding: 40px 20px 0;   
+    }
+    ul.link{
+      display: flex;
+      width: calc(100% + 32px);
+      padding: 50px 0 0;
+      margin: 0 0 0 -16px;
+      list-style: none;
+      @media screen and (max-width: 768px) {
+        flex-flow: row wrap;
+        width: calc(100% + 20px);
+        margin: 0 0 0 -10px;
+        padding: 40px 0 0;
+      }
+      @media screen and (max-width: 374px) {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+      li{
+        position: relative;
+        width: 25%;
+        margin: 0 16px;
+        padding: 0;
+        border-radius: 4px;
+        background: linear-gradient(180deg,#f07e27 -98.79%,#141d59 96.62%);
+        overflow: hidden;
+        z-index: 2;
+        @media screen and (max-width: 768px) {
+          width: calc(50% - 20px);
+          margin: 0 10px 20px;
+        }
+        @media screen and (max-width: 374px) {
+          display: block;
+          width: 100%;
+          margin: 0 0 20px;
+        }
+        &:before{
+          position: absolute;
+          top: 1px;
+          bottom: 1px;
+          left: 1px;
+          right: 1px;
+          display: block;
+          border-radius: 4px;
+          background: #0c1131;
+          content: "";
+        }
+        a{
+          position: relative;
+          display: block;
+          padding: 40px 0;
+          @media screen and (max-width: 768px) {
+            padding: 35px 0;
+          }
+          img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            transition: all .35s ease;
+            &.default{
+              visibility: visible;
+              opacity: 1;
+            }
+            &.hover{
+              visibility: hidden;
+              opacity: 0;
+            }
+          }
+          &:hover{
+            .default{
+              visibility: hidden;
+              opacity: 0;
+            }
+            .hover{
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+        &:nth-child(1) a img{
+          width: 122px;
+          height: 38px;
+          margin: -19px 0 0 -61px;
+        }
+        &:nth-child(2) a img{
+          width: 138px;
+          height: 34px;
+          margin: -17px 0 0 -69px;
+        }
+        &:nth-child(3) a img{
+          width: 136px;
+          height: 27px;
+          margin: -13px 0 0 -68px;
+        }
+        &:nth-child(4) a img{
+          width: 132px;
+          height: 29px;
+          margin: -14px 0 0 -66px;
+        }
+      }
+    }
+    .buttons{
+      display: flex;
+      padding: 90px 0 0;
+      @media screen and (max-width: 1024px) {
+        padding: 75px 0 0;
+      }
+      @media screen and (max-width: 920px) {
+        padding: 60px 0 0;
+      }
+      @media screen and (max-width: 768px) {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+      }
+      @media screen and (max-width: 480px) {
+        display: block;
+      }
+      button,
+      a{
+        position: relative;
+        width: 338px;
+        height: 85px;
+        margin: 0 30px 0 0;
+        @media screen and (max-width: 768px) {
+          width: calc(50% - 10px);
+          height: 70px;
+          margin: 0;
+        }
+        @media screen and (max-width: 480px) {
+          width: 100%;
+          margin: 0 0 20px;
+          a{
+            margin: 0;
+          }
+        }
+      }
+      button{
+        &:before{
+          position: absolute;
+          top: 20px;
+          left: -20px;
+          width: 364px;
+          height: 30px;
+          border-radius: 50%;
+          background: #e03c37;
+          filter: blur(64px);
+          content: "";
+        }
+        svg{
+          display: block;
+          width: 30px;
+          height: 28px;
+          margin: 0 25px 0 0;
+          @media screen and (max-width: 576px) {
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+      a{
+        margin: 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        transition: background .35s ease;
+        @media screen and (max-width: 576px) {
+          font-size: 14px;
+          line-height: 14px;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: 18px;
+          line-height: 18px;
+        }
+        &:hover{
+          background: rgba(255, 255, 255, 0.25);
+        }
+      }
+    }
+    ul.social{
+      display: flex;
+      align-items: center;
+      padding: 58px 0 0;
+      margin: 0;
+      list-style: none;
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+      }
+      @media screen and (max-width: 480px) {
+        padding: 40px 0 0;
+      }
+      li{
+        width: 50px;
+        height: 50px;
+        margin: 0 32px 0 0;
+        @media screen and (max-width: 480px) {
+          margin: 0 10px 0 0;
+        }
+        &:last-child{
+          margin: 0;
+        }
+        a{
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: rgba(196,196,196,.16);
+          transition: background .35s;
+          svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            transition: all .35s ease;
+            &.default{
+              visibility: visible;
+              opacity: 1;
+            }
+            &.hover{
+              visibility: hidden;
+              opacity: 0;
+            }
+          }
+        }
+        &:nth-child(1) svg{
+          width: 14px;
+          height: 26px;
+          margin: -13px 0 0 -7px;
+        }
+        &:nth-child(2) svg{
+          width: 24px;
+          height: 19px;
+          margin: -9.5px 0 0 -12px;
+        }
+        &:nth-child(3) svg{
+          width: 24px;
+          height: 24px;
+          margin: -12px 0 0 -12px;
+        }
+        &:nth-child(4) svg{
+          width: 19px;
+          height: 22px;
+          margin: -10px 0 0 -9.5px;
+        }
+        &:nth-child(5) svg{
+          width: 24px;
+          height: 18px;
+          margin: -9px 0 0 -12px;
+        }
+        &:hover{
+          svg.default{
+            visibility: hidden;
+            opacity: 0;
+          }
+          svg.hover{
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    ul.menu{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 128px 0 0;
+      margin: 0;
+      list-style: none;
+      @media screen and (max-width: 1200px) {
+        padding: 100px 0 0;
+      }
+      @media screen and (max-width: 920px) {
+        padding: 80px 0 0;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 50px 0 0;
+      }
+      @media screen and (max-width: 576px) {
+        display: block;
+        padding: 40px 0 0;
+      }
+      @media screen and (max-width: 480px) {
+        padding: 30px 0 0;   
+      }
+      li{
+        @media screen and (max-width: 576px) {
+          display: flex;
+          justify-content: center;
+          padding: 0 0 20px;
+          &:last-child{
+            padding: 0;
+          }
+        }
+        a{
+          display: block;
+          font-family: 'CoolveticaL';
+          font-size: 22px;
+          line-height: 32px;
+          color: $colorWhite;
+          letter-spacing: 0.03em;
+          text-decoration: none;
+          transition: color .35s ease;
+          &:hover{
+            color: $colorOrange;
+          }
+        }
+      }
+    }
+    .copywrite{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 128px 0 0;
+      @media screen and (max-width: 1200px) {
+        padding: 60px 0 0;
+      }
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+      @media screen and (max-width: 576px) {
+        padding: 40px 0 0;
+      }
+      @media screen and (max-width: 480px) {
+              
+      }
+      span{
+        display: block;
+        font-family: 'CoolveticaL';
+        font-size: 15px;
+        letter-spacing: 0.03em;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
