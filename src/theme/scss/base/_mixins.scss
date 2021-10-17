@@ -1,0 +1,64 @@
+///
+/// Some default breakpoints setup that work, time saver while keeping your breakpoints consistent
+///
+
+$breakpoints: ("xs": 321px,//
+  "x-phone": 426px,
+  "phone": 400px,
+  "phone-wide": 480px,
+  "520": 520px,
+  "phablet": 550px,//
+  "tablet-small": 640px,
+  "tablet": 768px,
+  '782': 782px,
+  "813": 813px,
+  "991": 991px,
+  "tablet-wide-max": 1025px,
+  "tablet-wide": 1024px,//
+  "sm-comp": 1100px,
+  '1180': 1180px,
+  "desktop": 1248px,
+  '1270': 1270px,
+  '1280' : 1280px,//
+
+  "1435": 1435px,//
+  "desktop-wide": 1441px,//
+  "1600": 1600px,
+  "1800": 1800px,
+  "1921": 1921px,//
+  "2200": 2200px);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+
+
+/// Animate css properties
+// usage 
+// scss - @include animate(color);
+//     or @include animate(color width);
+//     or @include animate(color width, 1s, linear);
+//
+$animation-speed: 0.1s !default;
+
+@mixin animate($properties, $duration: $animation-speed, $easing: linear) {
+  $list: ();
+
+  @each $prop in $properties {
+    $str: #{$prop} #{$duration} #{$easing};
+    $list: join($list, #{$str}, comma);
+  }
+
+  transition: $list;
+}
