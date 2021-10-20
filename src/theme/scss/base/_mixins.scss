@@ -62,3 +62,15 @@ $animation-speed: 0.1s !default;
 
   transition: $list;
 }
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

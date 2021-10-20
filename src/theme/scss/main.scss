@@ -1,9 +1,14 @@
-@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../../../node_modules/normalize.css/normalize";
+// @import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// @import "../../../node_modules/normalize.css/normalize";
 @import "base/mixins";
 @import "base/typography";
 @import "base/variables";
-@import "base/common.scss";
-@import "base/skeleton.scss";
+@import "base/common";
+@import "base/skeleton";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "page/front-page";
 
 //@import 'https://unpkg.com/swiper/swiper-bundle.min.css';

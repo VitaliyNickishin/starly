@@ -1,0 +1,154 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+  transition: top .35s ease, padding .35s ease, background .35s ease;
+
+
+  &.scrolled {
+    position: fixed;
+    top: -100px;
+  }
+
+  &.fixed {
+    top: 0;
+    padding: 20px 0;
+    background: rgba(7, 1, 37, .9);
+    backdrop-filter: blur(5px);
+  }
+
+  &-inner {
+    width: 100%;
+    padding: 35px 0;
+    @include space-between;
+
+  }
+  .logo {
+    display: block;
+    width: 132px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    @include mq ("991", max) {
+      position: fixed;
+      top: 0;
+      left: -101%;
+      display: block;
+      width: 100%;
+      height: 100Vh;
+      padding: 20px;
+      background: $main-bg url('../img/bg-eath.png') no-repeat top right;
+      transition: left .35s;
+      z-index: 1000;
+      
+      //open mobile menu
+      &.active {
+        left: 0;
+      }
+    }
+
+    li {
+      padding-left: 70px;
+      @include mq ("991", max) {
+        &:first-child {
+          padding-bottom: 100px;
+        }
+        padding-left: 0;
+        padding-bottom: 50px;
+        text-align: center;
+      }
+      
+      &:last-child {
+        padding-left: 160px;
+        @include mq ("991", max) {
+          padding-left: 0;
+          a {
+            margin: auto;
+          }
+        }
+      }
+      a {
+        @include mq ("991", max) {
+          font-size: 25px;
+          line-height: 25px;
+          
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  @include mq ("991", max) {
+    @include space-between;
+    // padding-bottom: 100px;
+    .burger {
+      span {
+        background: transparent;
+        &:before,
+        &:after {
+          transform: rotate(0deg);
+        }
+
+        &:before {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+
+        &:after {
+          top: 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  @include mq ("991", max) {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+
+    span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: $third_color;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $third_color;
+        transition: all .35s ease;
+      }
+
+      &:before {
+        top: -10px;
+      }
+
+      &:after {
+        top: 10px;
+      }
+    }
+  }
+}
+
