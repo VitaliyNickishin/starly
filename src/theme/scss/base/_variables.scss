@@ -2,7 +2,9 @@
 $primary_color: #ffffff;
 $secondary_color: #353535;
 $third_color: #82C8F4;
+$lemon_color: #FFDF6D;
 $main-bg: #121623;
+$placeholder_color: #D0D0D0;
 
 
 $grey: #E8DCD0;
@@ -17,6 +19,6 @@ $orange: #DA5429;
 $bg-overlay: #D1A684;
 
 // fonts
-$regular_font: 'Gilroy-Medium', sans-serif;
-$medium_font: 'Gilroy-Medium', sans-serif;
-$bold_font: 'Gilroy-Bold', sans-serif;
+$regular_font: 'Gilroy-Medium', sans-serif; //500
+$medium_font: 'Gilroy-SemiBold', sans-serif; //600
+$bold_font: 'Gilroy-Bold', sans-serif; //700

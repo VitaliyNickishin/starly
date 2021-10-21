@@ -42,9 +42,12 @@
 }
   .column,
   .columns {
-    width: 100%;
-    float: left;
-    box-sizing: border-box; }
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-height: 1px;
+    width: 100%; 
+  }
   
   /* For devices larger than 400px */
   // @include mq(phone) {
@@ -141,15 +144,17 @@
   input[type="password"],
   textarea,
   select {
-    height: 48px;
-    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-    background-color: rgba(9, 19, 33, 0.0638304);
-    // color: rgba(117, 117, 117, .9);
-    color: $secondary_color;
-    border-radius: 4px;
+    height: 60px;
+    padding: 6px 25px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: #111522;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+    color: $primary_color;
+    border-radius: 12px;
     border: none;
-    box-shadow: none;
-    box-sizing: border-box; }
+    &::placeholder {
+      color: $placeholder_color;
+    }
+  }
   /* Removes awkward default styles on some inputs for iOS */
   input[type="email"],
   input[type="number"],
@@ -259,27 +264,4 @@
     float: right; }
   .u-pull-left {
     float: left; }
-  
-  
-  /* Misc
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  hr {
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
-    border-width: 0;
-    border-top: 1px solid #E1E1E1; }
-  
-  
-  /* Clearing
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  
-  /* Self Clearing Goodness */
-  .container:after,
-  .row:after,
-  .u-cf {
-    content: "";
-    display: table;
-    clear: both; }
-  
-  
   
