@@ -1,5 +1,6 @@
 $(function() {
-  window.appScroll = 0
+
+  headerFixed();
 
   // Menu links
   var links = $('.header').find('li > a')
@@ -99,19 +100,17 @@ $(window).on('load', function() {
   $('.modalbox, .modalsuccess').show(0)
 })
 
-$(window).on('scroll', function () {
-  var header = $('.header'),
-      appScroll = $(this).scrollTop()
-  if(appScroll > 0) {
-    header.addClass('scrolled')
-    if(appScroll < window.appScroll) {
-      header.addClass('fixed')
-    } else {
-      header.removeClass('fixed')
+
+/* sticky header */ 
+function headerFixed() {
+    let header = jQuery('.header');
+    
+	$(window).on('scroll', function () {
+		if ($(this).scrollTop() > 50) {
+			header.addClass('fixed');
+		} else {
+      header.removeClass('fixed');
     }
-  } else {
-    header.removeClass('fixed')
-    header.removeClass('scrolled')
-  }
-  window.appScroll = appScroll
-});
+
+	});
+}
