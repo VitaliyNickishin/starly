@@ -21,6 +21,11 @@ h1,
   line-height: 3.6rem;
   font-family: $bold_font;
   color: $primary_color;
+  @include mq(tablet, max) {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
 }
 
 h2,
@@ -52,6 +57,7 @@ h4,
   line-height: 1.8rem;
   font-family: $bold_font;
   color: $primary_color;
+  
 }
 
 h5 {
@@ -82,6 +88,11 @@ b,
     line-height: 1.8rem;
     color: $lemon_color;
     font-family: $medium_font;
+    @include mq(tablet, max) {
+      padding-bottom: 8px;
+      font-size: 1.125rem;
+      line-height: 1.3125rem;
+    }
   }
 }
 .box-content {
@@ -89,9 +100,7 @@ b,
   background: linear-gradient(97.93deg, #F4D173 -1.68%, #6E21A9 100.84%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 32px;
-  @include mq (phablet, max) {
-    padding: 20px;
-  }
+  
 }
 .button {
   @include flex-center;
