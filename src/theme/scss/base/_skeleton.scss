@@ -124,14 +124,67 @@
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 2rem;
-    font-weight: 300;
   }
   
   p {
     margin: 0;
   }
   
-  
+  h1,
+  .h1 {
+    font-size: 3rem; //48px
+    line-height: 3.6rem;
+    font-family: $bold_font;
+    color: $primary_color;
+
+    @include mq(tablet, max) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+
+  }
+
+  h2,
+  .h2 {
+    font-size: 2.5rem; //40px
+    line-height: 48px;
+    font-family: $bold_font;
+    color: $secondary_color;
+    letter-spacing: -0.5px;
+
+    @include mq(tablet, max) {
+      font-size: 2rem;
+    }
+  }
+
+  h3,
+  .h3 {
+    font-size: 2rem; //32px
+    font-family: $bold_font;
+    line-height: 38px;
+    color: $secondary_color;
+
+    @include mq(tablet, max) {
+      font-size: 1.6rem;
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.5rem; //24px
+    line-height: 1.8rem;
+    font-family: $bold_font;
+    color: $primary_color;
+
+  }
+
+  h5 {
+    font-size: 20px;
+    line-height: 28px;
+    color: $secondary_color;
+    font-family: $bold_font;
+  }
+
   
   /* Forms
   –––––––––––––––––––––––––––––––––––––––––––––––––– */

@@ -1,0 +1,84 @@
+.counter {
+  .pre {
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: capitalize;
+
+    @include mq (tablet, max) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  ul.box {
+    margin-top: 20px;
+    @include flex-center;
+    @include mq (tablet, max) {
+      margin-top: 10px;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      width: 147px;
+      height: 100px;
+      margin: 0 14px;
+      @include mq (tablet, max) {
+        width: 73px;
+        height: 46px;
+        margin: 0 5px;
+      }
+    }
+
+    span {
+      position: relative;
+      @include flex-center;
+      width: 70px;
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #233861 0%, #5CEFF9 100%);
+      @include mq (tablet, max) {
+        width: 34px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        left: 1px;
+        right: 1px;
+        border-radius: 8px;
+        background: #233861;
+      }
+    }
+
+    i {
+      position: relative;
+      font-family: $count_bold_font;
+      font-size: 72px;
+      font-style: normal;
+      @include mq (tablet, max) {
+        font-size: 26px;
+      }
+    }
+  }
+
+  ul.info {
+    @include flex-center;
+    padding-top: 10px;
+
+    li {
+      width: 175px;
+      font-family: $count_reg_font;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .64);
+      text-align: center;
+      @include mq (tablet, max) {
+        font-size: 12px;
+        width: 83px;
+      }
+    }
+  }
+}
