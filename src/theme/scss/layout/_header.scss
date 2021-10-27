@@ -14,7 +14,7 @@
     backdrop-filter: blur(5px);
     z-index: 9999;
     .header-inner {
-      padding: 15px 0;
+      padding: 7px 0;
     }
   }
 
@@ -22,6 +22,9 @@
     width: 100%;
     padding: 35px 0;
     @include space-between;
+    @include mq ("991", max) {
+      padding: 16px 0;
+    }
 
   }
   .logo {
@@ -29,6 +32,8 @@
     width: 132px;
   }
   .nav {
+    display: flex;
+    align-items: center;
     ul {
       @include mq ("991", max) {
         position: fixed;
@@ -45,48 +50,46 @@
         //open mobile menu
         &.active {
           left: 0;
-        }
-      }
-  
-      li {
-        @include mq ("991", max) {
-          &:first-child {
-            padding-bottom: 100px;
-          }
-          padding-left: 0;
-          padding-bottom: 50px;
-          text-align: center;
-        }
-        
-        &:last-child {
-          padding-left: 160px;
-          @include mq ("991", max) {
-            padding-left: 0;
+          li {
+            &:first-child {
+              padding-bottom: 100px;
+            }
+            padding-right: 0;
+            padding-bottom: 50px;
+            text-align: center;
             a {
-              margin: auto;
+              font-size: 25px;
+              line-height: 25px;
             }
           }
         }
-        a {
-          @include mq ("991", max) {
-            font-size: 25px;
-            line-height: 25px;
-            
-          }
-        }
+      }
+      
+    }
+    .button {
+      margin-left: 140px;
+      @include mq ("991", max) {
+        margin-left: 0;
+        margin-right: 16px;
+        width: 128px;
+        height: 44px;
+        border-radius: 8px;
       }
     }
 
   }
 
 }
-
+//general header, footer
 .nav {
   ul {
     display: flex;
     align-items: center;
     li {
-      padding-left: 70px;
+      padding-right: 70px;
+      &:last-child {
+        padding-right: 0;
+      }
     }
   }
 }
@@ -96,7 +99,7 @@
   @include mq ("991", max) {
     @include space-between;
     // padding-bottom: 100px;
-    .burger {
+    .close {
       span {
         background: transparent;
         &:before,
@@ -120,22 +123,22 @@
 
 .burger {
   display: none;
-
   @include mq ("991", max) {
     @include flex-center;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    margin: 0;
-    border: 0;
+    padding: 13px 11px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
     background: transparent;
 
     span {
       position: relative;
       display: block;
       width: 100%;
-      height: 3px;
-      background: $third_color;
+      height: 2px;
+      background: $white;
+      border-radius: 10px;
 
       &:before,
       &:after {
@@ -143,18 +146,19 @@
         position: absolute;
         left: 0;
         display: block;
+        border-radius: 10px;
         width: 100%;
         height: 100%;
-        background: $third_color;
+        background: $white;
         transition: all .35s ease;
       }
 
       &:before {
-        top: -10px;
+        top: -8px;
       }
 
       &:after {
-        top: 10px;
+        top: 8px;
       }
     }
   }
