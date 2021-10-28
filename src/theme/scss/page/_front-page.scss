@@ -51,6 +51,80 @@
   }
 
 }
+//2 section
+.benefits {
+  padding-top: 75px;
+  margin-bottom: -50px;
+  position: relative;
+  background: $main-bg url('../img/bg-benefits.png') no-repeat center;
+  background-size: cover;
+  &:after {
+    content: '';
+    background-image: url('../img/comet.png');
+    background-size: 252px 169px;
+    width: 252px;
+    height: 169px;
+    position: absolute;
+    right: 40px;
+    top: -60px;
+
+    @include mq (tablet, max) {
+      background-size: 60px 40px;
+      width: 60px;
+      height: 40px;
+      right: 16px;
+      top: 30px;
+    }
+  }
+  .content-box-row {
+    margin-right: -8px;
+    margin-left: -8px;
+    @include mq ("991", max) {
+      justify-content: center;
+    }
+  }
+  &__box-content-gradient {
+    margin: 130px auto 0;
+    width: 618px;
+    max-width: 100%;
+    position: relative;
+    @include mq (tablet, max) {
+      margin-top: 56px;
+    }
+    .box-content-gradient {
+      @include mq (tablet-small, max) {
+        padding: 16px;
+      }
+    }
+    .h3 {
+      max-width: 333px;
+      margin-bottom: 25px;
+      @include mq (tablet-small, max) {
+        max-width: 200px;
+      }
+    }
+    .button {
+      width: 234px;
+    }
+    &:after {
+      content: '';
+      background-image: url('../img/coin.png');
+      background-size: 223px 265px;
+      width: 223px;
+      height: 265px;
+      position: absolute;
+      right: 40px;
+      top: -100px;
+      @include mq (tablet-small, max) {
+        background-size: 123px 145px;
+        width: 123px;
+        height: 145px;
+        right: 16px;
+        top: -30px;
+      }
+    }
+  }
+}
 
 //yellow btn
 .banner-info {
@@ -79,6 +153,58 @@
     transform: skewX(15deg);
     @include mq (tablet, max) {
       font-size: 16px;
+    }
+  }
+}
+
+.content-box {
+  margin: 8px;
+  padding: 38px 15px 15px;
+  width: 344px;
+  height: 218px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(31, 38, 60, 0.6);
+  // backdrop-filter: blur(4px);
+  border-radius: 24px;
+  @include mq (tablet, max) {
+    padding: 30px 10px 10px;
+    width: 168px;
+    height: 168px;
+    margin: 6px;
+  }
+  @include mq (m, max) {
+    padding: 15px 5px 5px;
+    width: 138px;
+    height: 138px;
+  }
+  strong {
+    font-size: 4rem;
+    line-height: 4.8125rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+    // color: linear-gradient(180deg, #314897 100%, #5DF0F9 100%);
+    background: -webkit-linear-gradient(359deg, #314897 -10%, #5DF0F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include mq (tablet, max) {
+      font-size: 2rem;
+      line-height: 2.4375rem;
+    }
+    @include mq (m, max) {
+      font-size: 1.5rem;
+      line-height: 2.0rem;
+    }
+  }
+  p {
+    margin-top: 18px;
+    max-width: 205px;
+    @include mq (tablet, max) {
+      font-size: .875rem;
+    }
+    @include mq (m, max) {
+      font-size: .75rem;
     }
   }
 }

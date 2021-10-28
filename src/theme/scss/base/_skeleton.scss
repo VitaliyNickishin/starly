@@ -82,7 +82,7 @@
     .one-third.column               { width: 30.6666666667%; }
     .two-thirds.column              { width: 65.3333333333%; }
   
-    .one-half.column                { width: 48%; }
+    .one-half.column                { width: 50%; }
   
     /* Offsets */
     .offset-by-one.column,
@@ -149,8 +149,7 @@
     font-size: 2.5rem; //40px
     line-height: 48px;
     font-family: $bold_font;
-    color: $secondary_color;
-    letter-spacing: -0.5px;
+    color: $primary_color;
 
     @include mq(tablet, max) {
       font-size: 2rem;
@@ -162,7 +161,7 @@
     font-size: 2rem; //32px
     font-family: $bold_font;
     line-height: 38px;
-    color: $secondary_color;
+    color: $primary_color;
 
     @include mq(tablet, max) {
       font-size: 1.6rem;

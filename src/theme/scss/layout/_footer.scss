@@ -9,6 +9,9 @@
   }
   .column {
     z-index: 1;
+    @include mq (tablet) {
+      padding-right: 0;
+    }
   }
   
   .title-wrap {
@@ -62,7 +65,7 @@
     position: absolute;
     top: -190px;
     right: -80px;
-    max-width: 935px;
+    max-width: 870px;
     @include mq ("1650", max) {
       right: 0;
       max-width: 835px;

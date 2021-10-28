@@ -63,9 +63,12 @@ b,
       line-height: 1.3125rem;
     }
   }
+  span {
+    display: block;
+  }
 }
 //Be in The DeFi’s Inner Club and get it all, form
-.box-content {
+.box-content-gradient {
   padding: 35px;
   background: linear-gradient(97.93deg, #F4D173 -1.68%, #6E21A9 100.84%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
