@@ -76,6 +76,19 @@
       top: 30px;
     }
   }
+  //gold coin
+  &::before {
+    content: '';
+    background-image: url('../img/asset-5.png');
+    background-repeat: no-repeat;
+    background-size: 76px 83px;
+    width: 76px;
+    height: 83px;
+    position: absolute;
+    right: 170px;
+    bottom: 0;
+    z-index: 1;
+  }
   .content-box-row {
     margin-right: -8px;
     margin-left: -8px;
@@ -85,9 +98,10 @@
   }
   &__box-content-gradient {
     margin: 130px auto 0;
+    position: relative;
     width: 618px;
     max-width: 100%;
-    position: relative;
+    z-index: 1;
     @include mq (tablet, max) {
       margin-top: 56px;
     }
@@ -106,6 +120,7 @@
     .button {
       width: 234px;
     }
+    //blue coin
     &:after {
       content: '';
       background-image: url('../img/coin.png');
@@ -115,6 +130,7 @@
       position: absolute;
       right: 40px;
       top: -100px;
+      z-index: 2;
       @include mq (tablet-small, max) {
         background-size: 123px 145px;
         width: 123px;
@@ -123,6 +139,234 @@
         top: -30px;
       }
     }
+  }
+}
+//3 section
+.best-team {
+  padding-top: 170px;
+  padding-bottom: 160px;
+  position: relative;
+  background: $main-bg url('../img/bg-best-team.png') no-repeat center;
+  background-size: cover;
+  @include mq (tablet, max) {
+    padding-bottom: 90px;
+  }
+  &__img-desktop {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    &::after {
+      content: '';
+      background-image: url('../img/comet-2.png');
+      background-repeat: no-repeat;
+      background-size: 355px 266px;
+      width: 355px;
+      height: 266px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    //blue coin
+    &::before {
+      content: '';
+      background-image: url('../img/coin-4.png');
+      background-repeat: no-repeat;
+      background-size: 154px 122px;
+      width: 154px;
+      height: 122px;
+      position: absolute;
+      left: 230px;
+      top: 170px;
+      transform: rotate(-25deg);
+    }
+  }
+  &__img-mobile {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+    @include mq ("991") {
+      display: none;
+    }
+    img {
+      width: 250px;
+      transform: rotate(10deg);
+    }
+    .red-smoke {
+      width: 200px;
+      height: 200px;
+      opacity: 0.45;
+      filter: blur(160px);
+    }
+    //blue coin
+    &::before {
+      content: '';
+      background-image: url('../img/coin-4.png');
+      background-repeat: no-repeat;
+      background-size: 32px 32px;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: 30px;
+      top: 50px;
+    }
+    //right screen
+    &::after {
+      content: '';
+      background-image: url('../img/comet-3-mob.png');
+      background-size: 120px 80px;
+      width: 120px;
+      height: 80px;
+      position: absolute;
+      right: 0;
+      bottom: 50px;
+    }
+    
+    .extra-element {
+      &-mob {
+        &::before {
+          content: '';
+          background-image: url('../img/comet.png');
+          background-size: 37px 25px;
+          width: 37px;
+          height: 25px;
+          position: absolute;
+          right: 30px;
+          top: 40px;
+        }
+        &::after {
+          content: '';
+          background-image: url('../img/comet.png');
+          background-size: 60px 40px;
+          width: 60px;
+          height: 40px;
+          position: absolute;
+          right: 90px;
+          top: 100px;
+        }
+      }
+      &-mob-bottom {
+        //gold coin
+        &::after {
+          content: '';
+          background-image: url('../img/asset-5.png');
+          background-repeat: no-repeat;
+          background-size: 20px 20px;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 160px;
+          bottom: 70px;
+        }
+      }
+    }
+
+  }
+  &__img-desktop {
+    @include mq ("991", max) {
+      display: none;
+    }
+  }
+  .extra-element {
+    //blue coin
+    &::before {
+      content: '';
+      background-image: url('../img/coin-5.png');
+      background-repeat: no-repeat;
+      background-size: 66px 81px;
+      width: 66px;
+      height: 81px;
+      position: absolute;
+      right: 10px;
+      top: 230px;
+    }
+    &::after {
+      content: '';
+      background-image: url('../img/comet.png');
+      background-repeat: no-repeat;
+      background-size: 295px 198px;
+      width: 295px;
+      height: 198px;
+      position: absolute;
+      right: 0;
+      top: 410px;
+      transform: rotate(-9deg);
+    }
+  }
+  .wrap-img-desktop {
+    &::before {
+      content: '';
+      background-image: url('../img/coin-3.png');
+      background-repeat: no-repeat;
+      background-size: 92px 94px;
+      width: 92px;
+      height: 94px;
+      position: absolute;
+      right: 310px;
+      bottom: 100px;
+      transform: rotate(-25deg);
+    }
+  }
+  &__btn {
+    margin-top: 30px;
+  }
+  &__description {
+    margin-top: 90px;
+    @include mq ("991", max) {
+      margin-left: 85px;
+      margin-top: 0;
+      &::before {
+        content: '';
+        background-image: url('../img/coin-3-mob.png');
+        background-repeat: no-repeat;
+        background-size: 84px 94px;
+        width: 84px;
+        height: 94px;
+        position: absolute;
+        left: 0;
+        bottom: 100px;
+      }
+    }
+  }
+  .desc-block {
+    padding-left: 20px;
+    border-left: 1px solid #252D48;
+    width: 480px;
+    max-width: 100%;
+    p {
+      color: $third_color;
+      margin-bottom: 60px;
+      font-size: $large-font-size;
+      line-height: 120%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include mq (tablet, max) {
+        font-size: $base-font-size;
+        margin-bottom: 28px;
+      }
+    }
+  }
+  &__slogan {
+    margin-top: 50px;
+    @include mq (tablet, max) {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}
+
+//It’s our Inner Club.
+.slogan {
+  font-size: $large-font-size;
+  font-weight: bold_font;
+  line-height: 1.6875rem;
+  letter-spacing: 0.375em;
+  text-transform: uppercase;
+  color: $white;
+  @include mq (tablet, max) {
+    font-size: $medium-font-size;
+    line-height: 1.375rem;
+    letter-spacing: 0.375em;
   }
 }
 
@@ -156,7 +400,7 @@
     }
   }
 }
-
+//benefits card
 .content-box {
   margin: 8px;
   padding: 38px 15px 15px;
@@ -207,5 +451,28 @@
       font-size: .75rem;
     }
   }
+}
+//fire from rocket
+.red-smoke {
+  content: '';
+  width: 604px;
+  height: 583px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #F84811;
+  opacity: 0.3;
+  filter: blur(150px);
+}
+.blue-smoke {
+  content: '';
+  width: 596px;
+  height: 596px;
+  position: absolute;
+  left: 57px;
+  top: 190.09px;
+  background: #546BB5;
+  opacity: 0.15;
+  filter: blur(245px);
 }
 

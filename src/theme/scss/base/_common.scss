@@ -10,7 +10,7 @@ html{
 body {
   font-family: $regular_font;
   margin: 0px;
-  font-size: 16px;
+  font-size: $base-font-size;
   color: $primary_color;
 }
 
@@ -73,8 +73,8 @@ b,
   background: linear-gradient(97.93deg, #F4D173 -1.68%, #6E21A9 100.84%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 32px;
-  
 }
+//main btn
 .button {
   @include flex-center;
   height: 60px;
@@ -94,6 +94,14 @@ b,
     color: $secondary_color;
     // background: linear-gradient(0deg, #ccc, #ccc);
     background: darken($color: $white, $amount: 10%)
+  }
+}
+//btn learn more
+.learn-more {
+  font-family: $medium_font;
+  color: $rose;
+  svg {
+    margin-left: 16px;
   }
 }
 
@@ -126,7 +134,7 @@ a {
   color: $primary_color;
   text-decoration: none;
   &:hover {
-      color: darken($color: $primary_color, $amount: 10%);
+    color: darken($color: $primary_color, $amount: 10%);
   }
 }
 
