@@ -354,6 +354,154 @@
     }
   }
 }
+//4 section 
+.price {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  background-color: $main-bg;
+  @include mq (tablet, max) {
+    padding-top: 35px;
+    padding-bottom: 24px;
+  }
+  // background-color: rgba(18, 25, 46, 0.25);
+  .h1 {
+    margin-bottom: 85px;
+    @include mq (tablet, max) {
+      margin-bottom: 10px;
+    }
+  }
+  .h4 {
+    font-family: $medium_font;
+    @include mq (tablet, max) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  } 
+  .row-content-box {
+    flex-wrap: inherit;
+    justify-content: space-between;
+    align-items: center;
+    @include mq (sm-comp, max) {
+      flex-direction: column;
+    }
+  }
+  .content-box {
+    margin: 15px;
+    width: 432px;
+    min-height: 210px;
+    background: rgba(21, 35, 64, 0.75);
+    backdrop-filter: blur(12px);
+    @include mq (sm-comp, max) {
+      width: 90%;
+      min-height: 196px;
+    }
+    
+    strong {
+      font-size: 3rem;
+      line-height: 3.625rem;
+      letter-spacing: 0.05em;
+      background: -webkit-linear-gradient(359deg, #FFDF6D 10%, #7320B4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include mq (tablet-wide, max) {
+        font-size: 36px;
+        line-height: 44px;
+      }
+      //separate
+      &:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        width: 2px;
+        height: 182px;
+        background: linear-gradient(180deg, #1A213D 0%, #B77E91 54.17%, #1B223D 100%);
+        transform: rotate(-90deg);
+        @include mq (tablet-wide, max) {
+          top: -36px;
+          margin-top: 40px;
+        }
+      }
+    }
+    p {
+      margin-top: 25px;
+      max-width: 240px;
+      font-family: $medium_font;
+      font-size: $medium-font-size;
+      line-height: 26px;
+      color: $third_color;
+      @include mq (tablet-wide, max) {
+        margin-top: 40px;
+        max-width: 100%;
+      }
+    }
+    
+  }
+  .has-bitcoin {
+    &::after {
+      @include mq (sm-comp, max) {
+        display: none;
+      }
+    }
+  }
+  .wrap-info {
+    p {
+      padding-right: 20px;
+      max-width: 610px;
+    }
+  }
+  &__learn-more {
+    margin-top: 32px;
+    @include mq (tablet, max) {
+      margin-top: 12px;
+    }
+  }
+  .row-membership {
+    margin-top: 85px;
+    @include mq (tablet, max) {
+      margin-top: 45px;
+    }
+    .left {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 45px;
+      margin-left: 15px;
+      @include space-between;
+      border-bottom: 1px solid #3F4E77;
+      @include mq (tablet-wide, max) {
+        padding-bottom: 30px;
+        border-bottom: 0;
+        flex-direction: column;
+        align-items: flex-start
+      }
+    }
+  }
+  &__btn {
+    @include mq (tablet-wide, max) {
+      margin-top: 30px;
+    }
+    .button {
+      width: 224px;
+      @include mq (tablet, max) {
+        width: 212px;
+      }
+      @include mq (m, max) {
+        width: 160px;
+      }
+    }
+  }
+  &__coin-twix {
+    position: absolute;
+    bottom: -60px;
+    right: 30px;
+    @include mq ("991", max) {
+      bottom: 0;
+      right: 15px;
+    }
+    
+  }
+  
+}
 
 //It’s our Inner Club.
 .slogan {
@@ -404,8 +552,9 @@
 .content-box {
   margin: 8px;
   padding: 38px 15px 15px;
+  position: relative;
   width: 344px;
-  height: 218px;
+  min-height: 218px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -428,7 +577,6 @@
     line-height: 4.8125rem;
     text-align: center;
     letter-spacing: 0.02em;
-    // color: linear-gradient(180deg, #314897 100%, #5DF0F9 100%);
     background: -webkit-linear-gradient(359deg, #314897 -10%, #5DF0F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -476,3 +624,46 @@
   filter: blur(245px);
 }
 
+.has-bitcoin {
+  &::after {
+    content: '';
+    background-image: url('../img/bitcoin.png');
+    background-repeat: no-repeat;
+    background-size: 85px 80px;
+    width: 85px;
+    height: 80px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+  }
+}
+
+.coin-twix {
+  .small {
+    position: absolute;
+    width: 158px;
+    height: 170px;
+    left: -60px;
+    bottom: 0;
+  }
+
+  .big {
+    position: relative;
+    width: 245px;
+    height: 290px;
+    z-index: 1;
+  }
+  @include mq ("991", max) {
+    .small {
+      width: 83px;
+      height: 90px;
+      left: -10px;
+      bottom: -20px;
+    }
+
+    .big {
+      width: 107px;
+      height: 128px;
+    }
+  }
+}
