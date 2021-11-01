@@ -3,7 +3,7 @@
   background: $main-bg url('../img/bg-footer.png') no-repeat bottom center;
   background-size: cover;
   width: 100%;
-  @include mq (tablet, max) {
+  @include mq (tablet-wide, max) {
     padding-top: 3.125rem;
     padding-bottom: 1rem;
   }

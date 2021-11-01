@@ -1,6 +1,7 @@
 $(function() {
 
   headerFixed();
+  initSliderRoadmap();
 
   // Menu links
   var links = $('.header').find('li > a')
@@ -154,3 +155,28 @@ function headerFixed() {
 
 	});
 }
+
+//sleder Featured in mobile
+let initSliderRoadmap = function () {
+  $('.roadmap-slider').slick({
+    variableWidth: true,
+    slidesToScroll: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    speed: 300,
+    centerMode: true,
+    // adaptiveHeight: true,
+    // centerPadding: '100px',
+    infinite: false,
+    responsive: [
+      {
+          breakpoint: 1024,
+          settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+          }
+      },
+      
+      ]
+    });
+};
