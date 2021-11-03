@@ -76,10 +76,12 @@ let headerFixed = function () {
 
 //sleder Roadmap
 let initSliderRoadmap = function () {
-  $('.roadmap-slider').slick({
+  const roadmapSlider = $('.roadmap-slider');
+  roadmapSlider.slick({
     variableWidth: true,
     slidesToScroll: 4,
     slidesToScroll: 1,
+    initialSlide: 1,
     arrows: false,
     speed: 300,
     centerMode: true,
@@ -96,4 +98,13 @@ let initSliderRoadmap = function () {
       ]
     });
     
-};
+    roadmapSlider.on('wheel', function(e) {
+        e.preventDefault();
+        if (e.originalEvent.deltaX > 0) {
+            $(this).slick('slickNext');
+        } else {
+            $(this).slick('slickPrev');
+        }
+    });
+  };
+  

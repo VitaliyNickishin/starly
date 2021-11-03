@@ -1,0 +1,116 @@
+//2 section
+.benefits {
+  padding-top: 75px;
+  margin-bottom: -50px;
+  position: relative;
+  background: $main-bg url('../img/bg-benefits.png') no-repeat center;
+  background-size: cover;
+
+  &:after {
+    content: '';
+    background-image: url('../img/comet.png');
+    background-size: 252px 169px;
+    width: 252px;
+    height: 169px;
+    position: absolute;
+    right: 40px;
+    top: -60px;
+
+    @include mq (tablet, max) {
+      background-size: 60px 40px;
+      width: 60px;
+      height: 40px;
+      right: 16px;
+      top: 30px;
+    }
+  }
+
+  //gold coin
+  &::before {
+    content: '';
+    background-image: url('../img/asset-5.png');
+    background-repeat: no-repeat;
+    background-size: 76px 83px;
+    width: 76px;
+    height: 83px;
+    position: absolute;
+    right: 170px;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .content-box-row {
+    margin-right: -8px;
+    margin-left: -8px;
+
+    @include mq ("sm-comp", max) {
+      flex-direction: column;
+    }
+
+    .part {
+      display: flex;
+      width: 50%;
+
+      @include mq ("sm-comp", max) {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .content-box {
+    border: 0;
+  }
+
+  &__box-content-gradient {
+    margin: 130px auto 0;
+    position: relative;
+    width: 618px;
+    max-width: 100%;
+    z-index: 1;
+
+    @include mq (tablet, max) {
+      margin-top: 56px;
+    }
+
+    .box-content-gradient {
+      @include mq (tablet-small, max) {
+        padding: 16px;
+      }
+    }
+
+    .h3 {
+      max-width: 333px;
+      margin-bottom: 25px;
+
+      @include mq (tablet-small, max) {
+        max-width: 200px;
+      }
+    }
+
+    .button {
+      width: 234px;
+    }
+
+    //blue coin
+    &:after {
+      content: '';
+      background-image: url('../img/coin.png');
+      background-size: 223px 265px;
+      width: 223px;
+      height: 265px;
+      position: absolute;
+      right: 40px;
+      top: -100px;
+      z-index: 2;
+
+      @include mq (tablet, max) {
+        background-size: 123px 145px;
+        width: 123px;
+        height: 145px;
+        right: 16px;
+        top: -30px;
+      }
+    }
+  }
+}
