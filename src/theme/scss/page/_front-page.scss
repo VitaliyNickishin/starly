@@ -238,9 +238,17 @@
   .content-box-row {
     margin-right: -8px;
     margin-left: -8px;
-    @include mq ("991", max) {
-      justify-content: center;
+    @include mq ("sm-comp", max) {
+      flex-direction: column;
     }
+    .part {
+      display: flex;
+      width: 50%;
+      @include mq ("sm-comp", max) {
+        width: 100%;
+      }
+    }
+    
   }
   .content-box {
     border: 0;
@@ -280,7 +288,7 @@
       right: 40px;
       top: -100px;
       z-index: 2;
-      @include mq (tablet-small, max) {
+      @include mq (tablet, max) {
         background-size: 123px 145px;
         width: 123px;
         height: 145px;
@@ -861,17 +869,14 @@
   flex-direction: column;
   background: rgba(31, 38, 60, 0.6);
   border: 1px solid #334A70;
-  // backdrop-filter: blur(4px);
   border-radius: 24px;
-  @include mq (tablet, max) {
+  @include mq (phablet, max) {
     padding: 30px 10px 10px;
-    width: 168px;
     min-height: 168px;
     margin: 6px;
   }
   @include mq (m, max) {
     padding: 15px 5px 5px;
-    width: 138px;
     min-height: 138px;
   }
   strong {
@@ -882,20 +887,21 @@
     background: -webkit-linear-gradient(359deg, #314897 -10%, #5DF0F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    @include mq (tablet, max) {
+    @include mq (phablet, max) {
       font-size: 2rem;
       line-height: 2.4375rem;
     }
-    @include mq (m, max) {
-      font-size: 1.5rem;
-      line-height: 2.0rem;
-    }
+    
   }
   p {
     margin-top: 18px;
     max-width: 205px;
-    @include mq (tablet, max) {
+    @include mq (phablet, max) {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
       font-size: .875rem;
+      height: 100%;
     }
     @include mq (m, max) {
       font-size: .75rem;
@@ -948,8 +954,6 @@
   &::before {
     content: '';
     margin-right: 14px;
-    // display: inline-block;
-    // vertical-align: middle;
     position: absolute;
     top: 3px;
     left: 0;
