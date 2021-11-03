@@ -22,9 +22,6 @@
   }
   .column {
     z-index: 1;
-    @include mq (tablet) {
-      padding-right: 0;
-    }
   }
   
   .title-wrap {
@@ -121,6 +118,7 @@
       line-height: 155%;
       opacity: 0.6;
       text-align: right;
+      font-family: $light_font;
       @include mq (phablet, max) {
         text-align: center;
       }
