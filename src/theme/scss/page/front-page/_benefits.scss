@@ -69,12 +69,12 @@
     max-width: 100%;
     z-index: 1;
 
-    @include mq (tablet, max) {
+    @include mq ("520", max) {
       margin-top: 56px;
     }
 
     .box-content-gradient {
-      @include mq (tablet-small, max) {
+      @include mq ("520", max) {
         padding: 16px;
       }
     }
@@ -104,12 +104,17 @@
       top: -100px;
       z-index: 2;
 
-      @include mq (tablet, max) {
+      @include mq ("520", max) {
         background-size: 123px 145px;
         width: 123px;
         height: 145px;
         right: 16px;
         top: -30px;
+      }
+      @include mq (m, max) {
+        background-size: 63px 75px;
+        width: 63px;
+        height: 75px;
       }
     }
   }
