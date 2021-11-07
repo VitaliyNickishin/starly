@@ -2,6 +2,7 @@
   padding: 10rem 0 4rem;
   position: relative;
   background: $main-bg url('../img/bg-footer.png') no-repeat bottom center;
+  // background: $main-bg;
   background-size: cover;
   width: 100%;
   &::before {
@@ -23,6 +24,7 @@
   .column {
     z-index: 1;
   }
+  
   
   .title-wrap {
     @include mq (tablet, max) {

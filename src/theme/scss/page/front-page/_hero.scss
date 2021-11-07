@@ -2,20 +2,6 @@
   padding-top: 145px;
   padding-bottom: 75px;
   position: relative;
-  background: $main-bg url('../img/bg-main.png') no-repeat center;
-  background-size: cover;
-
-  &::before {
-    content: '';
-    background-image: url('../img/comet-2.png');
-    background-repeat: no-repeat;
-    background-size: 355px 266px;
-    width: 295px;
-    height: 266px;
-    position: absolute;
-    left: -110px;
-    top: 550px;
-  }
 
   h1 {
     font-family: $medium_font;
@@ -24,6 +10,19 @@
       margin-bottom: 50px;
       font-size: 1.5rem;
       line-height: 1.8125rem;
+    }
+  }
+
+  &__meteorite {
+    top: 300px;
+    left: 300px;
+    animation-delay: 1.5s;
+    @include mq (tablet, max) {
+      left: 150px;
+      top: 700px;
+    }
+    &::after {
+      animation-delay: 1.5s;
     }
   }
 
