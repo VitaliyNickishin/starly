@@ -22,6 +22,15 @@
       left: -100px;
     }
   }
+  //blue coin
+  .coin-2 {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    left: 30px;
+    top: 50px;
+    animation: shoot-2 2.0s ease-out infinite;
+  }
 
   &__img-desktop {
     position: absolute;
@@ -31,17 +40,24 @@
     
 
     //blue coin
-    &::before {
-      content: '';
-      background-image: url('../img/coin-4.png');
-      background-repeat: no-repeat;
-      background-size: 154px 122px;
+    .coin-1 {
       width: 154px;
       height: 122px;
       position: absolute;
       left: 210px;
       top: 100px;
       transform: rotate(-25deg);
+      animation: shoot-2 1.1s linear infinite;
+    }
+    
+    .coin-3 {
+      width: 92px;
+      height: 94px;
+      position: absolute;
+      right: 310px;
+      bottom: 100px;
+      transform: rotate(-25deg);
+      animation: shoot 1.5s linear infinite;
     }
   }
 
@@ -66,42 +82,27 @@
       filter: blur(160px);
     }
 
-    //blue coin
-    &::before {
-      content: '';
-      background-image: url('../img/coin-4.png');
-      background-repeat: no-repeat;
-      background-size: 32px 32px;
-      width: 32px;
-      height: 32px;
-      position: absolute;
-      left: 30px;
-      top: 50px;
-    }
+    
 
     //right screen
-    &::after {
-      content: '';
-      background-image: url('../img/comet-3-mob.png');
-      background-size: 120px 80px;
-      width: 120px;
-      height: 80px;
-      position: absolute;
-      right: 0;
-      bottom: 50px;
-    }
+    // .comet-3 {
+    //   width: 120px;
+    //   height: 80px;
+    //   position: absolute;
+    //   right: 0;
+    //   bottom: 50px;
+    //   // animation: shoot-2 1.0s linear infinite;
+    // }
 
     .extra-element {
       &-mob {
-        &::before {
-          content: '';
-          background-image: url('../img/comet.png');
-          background-size: 37px 25px;
+        .comet-1 {
           width: 37px;
           height: 25px;
           position: absolute;
           right: 30px;
           top: 40px;
+          animation: shoot-2 1.5s linear infinite;
         }
 
         &::after {
@@ -159,20 +160,7 @@
     
   }
 
-  .wrap-img-desktop {
-    &::before {
-      content: '';
-      background-image: url('../img/coin-3.png');
-      background-repeat: no-repeat;
-      background-size: 92px 94px;
-      width: 92px;
-      height: 94px;
-      position: absolute;
-      right: 310px;
-      bottom: 100px;
-      transform: rotate(-25deg);
-    }
-  }
+  
 
   &__btn {
     margin-top: 30px;

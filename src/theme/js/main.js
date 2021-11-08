@@ -2,8 +2,9 @@ $(function() {
 
   headerFixed();
   initSliderRoadmap();
-  // initStarSky();
+  initStarSky();
   // initParticlesJS();
+  // initParallax();
 
   
   // Mobile menu
@@ -60,6 +61,23 @@ $(function() {
       }
     }, 1000)
   }
+
+  // var scene = document.getElementById('coin-4');
+  // var parallaxInstance = new Parallax(scene, {
+  //   relativeInput: true
+  //   });
+
+  //   parallaxInstance.friction(0.2, 0.2);
+
+
+    var image = document.getElementsByClassName('test');
+    new simpleParallax(image, {
+      delay: 5,
+      transition: 'cubic-bezier(0,0,0,1)',
+      maxTransition: 60,
+      overflow: true,
+      scale: 1.5
+    });
 });
 
 /* sticky header */ 
@@ -100,14 +118,14 @@ let initSliderRoadmap = function () {
       ]
     });
     
-    roadmapSlider.on('wheel', function(e) {
-      e.preventDefault();
-      if (e.originalEvent.deltaX > 0) {
-          $(this).slick('slickNext');
-      } else {
-          $(this).slick('slickPrev');
-      }
-  });
+  //   roadmapSlider.on('wheel', function(e) {
+  //     e.preventDefault();
+  //     if (e.originalEvent.deltaX > 0) {
+  //         $(this).slick('slickNext');
+  //     } else {
+  //         $(this).slick('slickPrev');
+  //     }
+  // });
 };
 
 //background Star Sky
@@ -230,3 +248,59 @@ let initParticlesJS = function () {
     "retina_detect": true
   });
 }
+
+// function for Home page
+// var initParallax = function () {
+//     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+//     } else {
+//         jQuery( '.coin-4' ).parallax({
+//             mouseport: jQuery(".roadmap"),
+//             xparallax: '50px',
+//             yparallax: '50px',
+//             xorigin: 0,
+//             yorigin: 0
+//         });
+
+//         jQuery( '.v-2' ).parallax({
+//             mouseport: jQuery(".section-1"),
+//             xparallax: '140px',
+//             yparallax: '40px',
+//             xorigin: 0,
+//             yorigin: 0
+//         });
+
+//         jQuery( '.v-3' ).parallax({
+//             mouseport: jQuery(".section-1"),
+//             xparallax: '100px',
+//             yparallax: '20px',
+//             xorigin: 0,
+//             yorigin: 0
+//         });
+
+//         jQuery( '.bg-computer' ).parallax({
+//             mouseport: jQuery(".section-1"),
+//             xparallax: '60px',
+//             yparallax: '30px',
+//             xorigin: 0,
+//             yorigin: 0
+//         });
+
+//         jQuery( '.bg-service' ).parallax({
+//             mouseport: jQuery(".section-1"),
+//             xparallax: '30px',
+//             yparallax: '15px',
+//             xorigin: 0,
+//             yorigin: 0
+//         });
+
+//         jQuery( '.bg-phone' ).parallax({
+//             mouseport: jQuery(".section-1"),
+//             xparallax: '100px',
+//             yparallax: '50px',
+//             xorigin: 0,
+//             yorigin: 0
+//         });
+//     }
+// };
+

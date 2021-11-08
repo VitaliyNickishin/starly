@@ -138,3 +138,17 @@
     vertical-align: bottom;
   }
 }
+
+
+
+
+@keyframes MoveUpDown {
+  50% {
+    top: 0px
+  }
+}
+@keyframes MoveDownUp {
+  50% {
+    bottom: 0px
+  }
+}

@@ -23,17 +23,14 @@
   
 
   //gold coin
-  &::before {
-    content: '';
-    background-image: url('../img/asset-5.png');
-    background-repeat: no-repeat;
-    background-size: 76px 83px;
+  .asset-5 {
     width: 76px;
     height: 83px;
     position: absolute;
     right: 170px;
     bottom: 0;
     z-index: 1;
+    animation: shoot-2 1.5s linear infinite;
   }
 
   .content-box-row {
