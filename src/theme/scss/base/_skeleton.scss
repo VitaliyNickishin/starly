@@ -29,22 +29,22 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 1455px;
+  // max-width: 1455px;
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box; 
-  // @include mq(phablet) {
-  //   max-width: 540px;
-  // }
-  // @include mq(tablet) {
-  //   max-width: 720px;
-  // }
-  // @include mq("991") {
-  //   max-width: 1080px;
-  // }
-  // @include mq(desktop-wide) {
-  //   max-width: 1455px;
-  // }
+  @include mq(phablet) {
+    max-width: 540px;
+  }
+  @include mq(tablet) {
+    max-width: 720px;
+  }
+  @include mq("991") {
+    max-width: 1080px;
+  }
+  @include mq(desktop-wide) {
+    max-width: 1455px;
+  }
 }
 .row {
   display: flex;
@@ -149,6 +149,10 @@
     font-family: $bold_font;
     color: $primary_color;
 
+    @include mq(desktop-wide, max) {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
     @include mq(tablet, max) {
       font-size: 1.25rem;
       line-height: 1.5rem;
@@ -162,6 +166,10 @@
     line-height: 48px;
     font-family: $bold_font;
     color: $primary_color;
+    @include mq(desktop-wide, max) {
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+    }
 
     @include mq(tablet, max) {
       font-size: 2rem;

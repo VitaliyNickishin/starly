@@ -36,7 +36,10 @@
     position: absolute;
     left: 0;
     bottom: 0;
-
+    z-index: 2;
+    @include mq (desktop-wide, max) {
+      width: 600px;
+    }
     
 
     //blue coin

@@ -91,6 +91,13 @@
     }
     
   }
+  .social-wrap {
+    .h4 {
+      @include mq (desktop-wide, max) {
+        font-size: 1.1rem;
+      }
+    }
+  }
   
   &-copyright {
     padding-top: 115px;

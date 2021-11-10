@@ -4,7 +4,7 @@
     line-height: 22px;
     text-transform: capitalize;
 
-    @include mq (tablet, max) {
+    @include mq (desktop-wide, max) {
       font-size: 16px;
       line-height: 19px;
     }
@@ -13,7 +13,7 @@
   ul.box {
     margin-top: 20px;
     @include flex-center;
-    @include mq (tablet, max) {
+    @include mq (desktop-wide, max) {
       margin-top: 10px;
     }
 
@@ -23,7 +23,7 @@
       width: 147px;
       height: 100px;
       margin: 0 14px;
-      @include mq (tablet, max) {
+      @include mq (desktop-wide, max) {
         width: 73px;
         height: 46px;
         margin: 0 5px;
@@ -40,7 +40,7 @@
       height: 100%;
       border-radius: 8px;
       background: linear-gradient(180deg, #233861 0%, #5CEFF9 100%);
-      @include mq (tablet, max) {
+      @include mq (desktop-wide, max) {
         width: 34px;
       }
 
@@ -61,7 +61,7 @@
       font-family: $count_bold_font;
       font-size: 72px;
       font-style: normal;
-      @include mq (tablet, max) {
+      @include mq (desktop-wide, max) {
         font-size: 26px;
       }
     }
@@ -79,7 +79,7 @@
       color: rgba(255, 255, 255, .64);
       text-align: center;
       flex-shrink: 0;
-      @include mq (tablet, max) {
+      @include mq (desktop-wide, max) {
         font-size: 12px;
         width: 83px;
       }

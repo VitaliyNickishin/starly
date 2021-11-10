@@ -2,7 +2,7 @@ $(function() {
 
   headerFixed();
   initSliderRoadmap();
-  initStarSky();
+  // initStarSky();
   // initParticlesJS();
   // initParallax();
 

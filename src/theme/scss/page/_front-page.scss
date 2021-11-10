@@ -25,6 +25,9 @@
   border-radius: 8px;
   transform: skewX(-15deg);
   z-index: 3;
+  @include mq (desktop-wide, max) {
+    max-width: 400px;
+  }
   @include mq (tablet, max) {
     max-width: 300px;
     height: 57px;
@@ -41,7 +44,7 @@
     color: #151926;
     text-align: center;
     transform: skewX(15deg);
-    @include mq (tablet, max) {
+    @include mq (desktop-wide, max) {
       font-size: 16px;
     }
   }
@@ -95,6 +98,7 @@
     @include mq (m, max) {
       font-size: .75rem;
     }
+    
   }
 }
 //fire from rocket
@@ -108,6 +112,10 @@
   background: #F84811;
   opacity: 0.3;
   filter: blur(150px);
+  @include mq (desktop-wide, max) {
+    width: 200px;
+    height: 480px;
+  }
 }
 .blue-smoke {
   content: '';
@@ -119,6 +127,10 @@
   background: #546BB5;
   opacity: 0.15;
   filter: blur(245px);
+  @include mq (desktop-wide, max) {
+    width: 300px;
+    height: 380px;
+  }
 }
 
 .has-bitcoin {
