@@ -26,8 +26,9 @@
       @include mq (desktop-wide, max) {
         width: 73px;
         height: 46px;
-        margin: 0 5px;
+        margin: 0 4px;
       }
+      
       @include mq (m, max) {
         margin: 0 2px;
       }
@@ -82,6 +83,9 @@
       @include mq (desktop-wide, max) {
         font-size: 12px;
         width: 83px;
+      }
+      @include mq (x-phone, max) {
+        width: 80px;
       }
       @include mq (m, max) {
         font-size: 12px;

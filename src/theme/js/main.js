@@ -2,9 +2,8 @@ $(function() {
 
   headerFixed();
   initSliderRoadmap();
-  // initStarSky();
+  initStarSky();
   // initParticlesJS();
-  // initParallax();
 
   
   // Mobile menu
@@ -61,13 +60,6 @@ $(function() {
       }
     }, 1000)
   }
-
-  // var scene = document.getElementById('coin-4');
-  // var parallaxInstance = new Parallax(scene, {
-  //   relativeInput: true
-  //   });
-
-  //   parallaxInstance.friction(0.2, 0.2);
 
 
     var image = document.getElementsByClassName('test');
@@ -132,175 +124,121 @@ let initSliderRoadmap = function () {
 let initStarSky = function () {
   for (var i = 0; i < 100; i++) {
     var star = '<div class="star-sky" style="animation: twinkle '+((Math.random()*5) + 5)+'s linear '+((Math.random()*5) + 5)+'s infinite; top: '+Math.random()*$(window).height()+'px; left: '+Math.random()*$(window).width()+'px;"></div>';
-    $('.hero, .benefit, .best-team, .roadmap').append(star);
+    $('.hero, .benefits, .best-team, .roadmap').append(star);
   }
 }
 
-let initParticlesJS = function () {
-  particlesJS("particles-js", {
-    "particles": {
-      "number": {
-        "value": 355,
-        "density": {
-          "enable": true,
-          "value_area": 789.1476416322727
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.48927153781200905,
-        "random": false,
-        "anim": {
-          "enable": true,
-          "speed": 0.2,
-          "opacity_min": 0,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 2,
-        "random": true,
-        "anim": {
-          "enable": true,
-          "speed": 2,
-          "size_min": 0,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": false,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 0.2,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "bubble"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 83.91608391608392,
-          "size": 1,
-          "duration": 3,
-          "opacity": 1,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true
-  });
-}
+// let initParticlesJS = function () {
+//   particlesJS("particles-js", {
+//     "particles": {
+//       "number": {
+//         "value": 355,
+//         "density": {
+//           "enable": true,
+//           "value_area": 789.1476416322727
+//         }
+//       },
+//       "color": {
+//         "value": "#ffffff"
+//       },
+//       "shape": {
+//         "type": "circle",
+//         "stroke": {
+//           "width": 0,
+//           "color": "#000000"
+//         },
+//         "polygon": {
+//           "nb_sides": 5
+//         },
+//         "image": {
+//           "src": "img/github.svg",
+//           "width": 100,
+//           "height": 100
+//         }
+//       },
+//       "opacity": {
+//         "value": 0.48927153781200905,
+//         "random": false,
+//         "anim": {
+//           "enable": true,
+//           "speed": 0.2,
+//           "opacity_min": 0,
+//           "sync": false
+//         }
+//       },
+//       "size": {
+//         "value": 2,
+//         "random": true,
+//         "anim": {
+//           "enable": true,
+//           "speed": 2,
+//           "size_min": 0,
+//           "sync": false
+//         }
+//       },
+//       "line_linked": {
+//         "enable": false,
+//         "distance": 150,
+//         "color": "#ffffff",
+//         "opacity": 0.4,
+//         "width": 1
+//       },
+//       "move": {
+//         "enable": true,
+//         "speed": 0.2,
+//         "direction": "none",
+//         "random": true,
+//         "straight": false,
+//         "out_mode": "out",
+//         "bounce": false,
+//         "attract": {
+//           "enable": false,
+//           "rotateX": 600,
+//           "rotateY": 1200
+//         }
+//       }
+//     },
+//     "interactivity": {
+//       "detect_on": "canvas",
+//       "events": {
+//         "onhover": {
+//           "enable": true,
+//           "mode": "bubble"
+//         },
+//         "onclick": {
+//           "enable": true,
+//           "mode": "push"
+//         },
+//         "resize": true
+//       },
+//       "modes": {
+//         "grab": {
+//           "distance": 400,
+//           "line_linked": {
+//             "opacity": 1
+//           }
+//         },
+//         "bubble": {
+//           "distance": 83.91608391608392,
+//           "size": 1,
+//           "duration": 3,
+//           "opacity": 1,
+//           "speed": 3
+//         },
+//         "repulse": {
+//           "distance": 200,
+//           "duration": 0.4
+//         },
+//         "push": {
+//           "particles_nb": 4
+//         },
+//         "remove": {
+//           "particles_nb": 2
+//         }
+//       }
+//     },
+//     "retina_detect": true
+//   });
+// }
 
-// function for Home page
-// var initParallax = function () {
-//     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-
-//     } else {
-//         jQuery( '.coin-4' ).parallax({
-//             mouseport: jQuery(".roadmap"),
-//             xparallax: '50px',
-//             yparallax: '50px',
-//             xorigin: 0,
-//             yorigin: 0
-//         });
-
-//         jQuery( '.v-2' ).parallax({
-//             mouseport: jQuery(".section-1"),
-//             xparallax: '140px',
-//             yparallax: '40px',
-//             xorigin: 0,
-//             yorigin: 0
-//         });
-
-//         jQuery( '.v-3' ).parallax({
-//             mouseport: jQuery(".section-1"),
-//             xparallax: '100px',
-//             yparallax: '20px',
-//             xorigin: 0,
-//             yorigin: 0
-//         });
-
-//         jQuery( '.bg-computer' ).parallax({
-//             mouseport: jQuery(".section-1"),
-//             xparallax: '60px',
-//             yparallax: '30px',
-//             xorigin: 0,
-//             yorigin: 0
-//         });
-
-//         jQuery( '.bg-service' ).parallax({
-//             mouseport: jQuery(".section-1"),
-//             xparallax: '30px',
-//             yparallax: '15px',
-//             xorigin: 0,
-//             yorigin: 0
-//         });
-
-//         jQuery( '.bg-phone' ).parallax({
-//             mouseport: jQuery(".section-1"),
-//             xparallax: '100px',
-//             yparallax: '50px',
-//             xorigin: 0,
-//             yorigin: 0
-//         });
-//     }
-// };
 

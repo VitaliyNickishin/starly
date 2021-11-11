@@ -2,6 +2,9 @@
   padding-top: 145px;
   padding-bottom: 75px;
   position: relative;
+  @include mq (tablet, max) {
+    padding-bottom: 35px;
+  }
 
   h1 {
     font-family: $medium_font;
@@ -12,6 +15,7 @@
       line-height: 2.2rem;
     }
     @include mq (tablet, max) {
+      margin-bottom: 50px;
       max-width: 480px;
       font-size: 1.5rem;
       line-height: 1.8125rem;
@@ -33,6 +37,8 @@
 
   &__inner {
     padding: 117px 250px 70px;
+    position: relative;
+    overflow: hidden;
     box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.16);
     border-radius: 50px;
     background: #171D30 url('../img/bg-circle.png') no-repeat right;
@@ -40,11 +46,15 @@
     @include mq(desktop-wide, max) {
       padding: 50px;
     }
-    // @include mq ("991", max) {
-    //   padding: 50px 16px 30px;
-    //   // background: #171D30;
-    // }
-
+    @include mq("991", max) {
+      background-size: cover;
+    }
+    @include mq(tablet, max) {
+      background-image: none;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    
     &::before {
       content: '';
       background: url('../img/star-blue-big.png') no-repeat;
@@ -61,29 +71,128 @@
         left: 630px;
       }
 
-      // @include mq ("991", max) {
-      //   display: none;
-      // }
+      @include mq (tablet, max) {
+        display: none;
+      }
     }
+    &::after {
+      content: '';
+      background: url('../img/star.png') no-repeat;
+      background-size: contain;
+      width: 242px;
+      height: 234px;
+      position: absolute;
+      bottom: 290px;
+      right: 30px;
 
+      @include mq (desktop-wide, max) {
+        width: 150px;
+        height: 150px;
+        bottom: 220px;
+        right: 50px;
+
+      }
+      @include mq (tablet, max) {
+        width: 100px;
+        height: 100px;
+        bottom: auto;
+        top: 10px;
+        right: 40px;
+        opacity: 0.25;
+      }
+      
+    }
+  }
+
+  .circle-mobile {
+    display: none;
+    position: absolute;
+    right: -25px;
+    top: -60px;
+    width: 235px;
+    height: 235px;
+    border-radius: 50%;
+    border: 1px solid #262E44;
+    opacity: 0.25;
+    @include mq (tablet, max) {
+      display: block;
+    }
+    &::before {
+      content: '';
+      width: 165px;
+      height: 165px;
+      border-radius: 50%;
+      border: 1px solid #262E44;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::after {
+      content: '';
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      border: 1px solid #262E44;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .title-wrap {
+    position: relative;
+    z-index: 1;
     &::before {
       content: '';
       background: url('../img/star-blue.png') no-repeat;
       width: 30px;
       height: 30px;
       position: absolute;
-      top: 60px;
-      left: 140px;
+      top: -80px;
+      left: -117px;
       @include mq (desktop-wide, max) {
-        left: 90px;
+        left: 35px;
+        top: -20px;
       }
 
-      // @include mq ("991", max) {
-      //   display: none;
-      // }
+      @include mq (tablet, max) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      background: url('../img/romb.png') no-repeat;
+      background-size: contain;
+      width: 82px;
+      height: 84px;
+      position: absolute;
+      bottom: 70px;
+      right: -130px;
+      @include mq (desktop-wide, max) {
+        width: 50px;
+        height: 50px;
+        bottom: 5px;
+        right: 50px;
+      }
+
+      @include mq ("991", max) {
+        bottom: 0px;
+        right: -30px;
+      }
+      @include mq (tablet, max) {
+        width: 20px;
+        height: 20px;
+        bottom: 70px;
+        right: 130px;
+        opacity: 0.25;
+      }
+      @include mq (phone-wide, max) {
+        bottom: 110px;
+        right: 125px;
+      }
     }
 
   }
@@ -105,10 +214,21 @@
         height: 50px;
         left: 65px;
       }
-
-      // @include mq (desktop-wide, max) {
-      //   display: none;
-      // }
+      @include mq ("991", max) {
+        left: 0;
+      }
+      @include mq (tablet, max) {
+        width: 20px;
+        height: 20px;
+        left: auto;
+        right: 135px;
+        top: -30px;
+        opacity: 0.25;
+      }
+      @include mq (phone-wide, max) {
+        right: 115px;
+        top: -40px;
+      }
     }
 
     &::after {
@@ -126,13 +246,21 @@
         bottom: -260px;
         left: -20px;
       }
+      @include mq (tablet, max) {
+        width: 20px;
+        height: 20px;
+        left: auto;
+        right: 195px;
+        top: -120px;
+        opacity: 0.25;
+      }
+      @include mq (phone-wide, max) {
+        top: -160px;
+      }
 
-      // @include mq (desktop-wide, max) {
-      //   display: none;
-      // }
     }
   }
-
+  
   .spaceman-img-desktop {
     position: absolute;
     right: 180px;
@@ -142,7 +270,7 @@
       width: 270px;
       right: 140px;
     }
-    @include mq ("991", max) {
+    @include mq (tablet, max) {
       display: none;
     }
     
@@ -150,46 +278,8 @@
       position: relative;
       z-index: 1;
     }
-    
-    &::after {
-      content: '';
-      background: url('../img/star.png') no-repeat;
-      background-size: contain;
-      width: 242px;
-      height: 234px;
-      position: absolute;
-      bottom: 290px;
-      right: -140px;
-      @include mq (desktop-wide, max) {
-        width: 150px;
-        height: 150px;
-        bottom: 220px;
-        right: -90px;
+  
 
-      }
-      
-    }
-
-    &::before {
-      content: '';
-      background: url('../img/romb.png') no-repeat;
-      background-size: contain;
-      width: 82px;
-      height: 84px;
-      position: absolute;
-      bottom: 630px;
-      right: -60px;
-      @include mq (desktop-wide, max) {
-        width: 50px;
-        height: 50px;
-        bottom: 475px;
-        right: -60px;
-      }
-
-      // @include mq ("1350", max) {
-      //   display: none;
-      // }
-    }
   }
 
   .spaceman-img-mobile {
@@ -197,7 +287,7 @@
     top: 120px;
     left: 0;
 
-    @include mq ("991") {
+    @include mq (tablet) {
       display: none;
     }
 
@@ -208,6 +298,8 @@
 
   &__counter {
     margin-top: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
     z-index: 2;
     position: relative;
 
@@ -225,12 +317,13 @@
     .button {
       margin: auto;
       width: 267px;
+      max-width: 100%;
       height: 68px;
       font-size: 20px;
     }
   }
 
-  &__social {
+  &__social-desktop {
     margin-top: 40px;
     justify-content: center;
     z-index: 2;
@@ -258,14 +351,15 @@
         bottom: -20px;
         left: 100px;
       }
-      // @include mq ("1350", max) {
-      //   display: none;
-      // }
+      @include mq (tablet, max) {
+        display: none;
+      }
     }
 
     &::after {
       content: '';
       background: url('../img/star-blue-big.png') no-repeat;
+      background-size: contain;
       width: 40px;
       height: 40px;
       position: absolute;
@@ -276,21 +370,24 @@
         top: -15px;
       }
 
-      // @include mq ("991", max) {
-      //   display: none;
-      // }
+      @include mq (tablet, max) {
+        width: 18px;
+        height: 18px;
+        top: -295px;
+        right: 20px;
+        opacity: 0.25;
+      }
     }
 
     @include mq (tablet, max) {
-      position: absolute;
-      bottom: -74px;
-      left: 20px;
+      display: none;
+      
     }
-
-    @include mq (m, max) {
-      bottom: -114px;
-      left: 50%;
-      transform: translateX(-50%);
+  }
+  &__social-mobile {
+    margin-top: 25px;
+    @include mq (tablet) {
+      display: none;
     }
   }
 

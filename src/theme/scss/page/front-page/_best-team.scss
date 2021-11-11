@@ -7,6 +7,11 @@
   @include mq (tablet, max) {
     padding-bottom: 90px;
   }
+  .column {
+    @include mq ("991") {
+      width: 50%;
+    }
+  }
   &__meteorite {
     top: -100px;
     left: 200px;
@@ -57,11 +62,20 @@
       width: 92px;
       height: 94px;
       position: absolute;
-      right: 310px;
+      right: 0;
       bottom: 100px;
       transform: rotate(-25deg);
       animation: shoot 1.5s linear infinite;
     }
+  }
+  .wrap-img-mobile,
+  .wrap-img-desktop {
+    position: relative;
+    z-index: 4;
+  }
+  &__content {
+    position: relative;
+    z-index: 5;
   }
 
   &__img-mobile {
@@ -75,7 +89,6 @@
 
     img {
       width: 250px;
-      transform: rotate(10deg);
     }
 
     .red-smoke {
@@ -84,18 +97,6 @@
       opacity: 0.45;
       filter: blur(160px);
     }
-
-    
-
-    //right screen
-    // .comet-3 {
-    //   width: 120px;
-    //   height: 80px;
-    //   position: absolute;
-    //   right: 0;
-    //   bottom: 50px;
-    //   // animation: shoot-2 1.0s linear infinite;
-    // }
 
     .extra-element {
       &-mob {
@@ -107,36 +108,32 @@
           top: 40px;
           animation: shoot-2 1.5s linear infinite;
         }
-
-        &::after {
-          content: '';
-          background-image: url('../img/comet.png');
-          background-size: 60px 40px;
-          width: 60px;
-          height: 40px;
+        .comet-2 {
+          width: 37px;
+          height: 25px;
           position: absolute;
           right: 90px;
           top: 100px;
+          animation: shoot-2 1.5s linear infinite;
         }
-      }
-
-      &-mob-bottom {
-
-        //gold coin
-        &::after {
-          content: '';
-          background-image: url('../img/asset-5.png');
-          background-repeat: no-repeat;
-          background-size: 20px 20px;
+        .coin-5 {
           width: 20px;
           height: 20px;
           position: absolute;
           left: 160px;
           bottom: 70px;
+          animation: shoot-2 2s linear infinite;
+        }
+        .coin-4{
+          width: 44px;
+          height: 54px;
+          position: absolute;
+          left: 200px;
+          bottom: 10px;
+          animation: shoot-2 3s linear infinite;
         }
       }
     }
-
   }
 
   &__img-desktop {
@@ -159,11 +156,7 @@
       right: 10px;
       top: 230px;
     }
-
-    
   }
-
-  
 
   &__btn {
     margin-top: 30px;
@@ -175,18 +168,6 @@
     @include mq ("991", max) {
       margin-left: 85px;
       margin-top: 0;
-
-      &::before {
-        content: '';
-        background-image: url('../img/coin-3-mob.png');
-        background-repeat: no-repeat;
-        background-size: 84px 94px;
-        width: 84px;
-        height: 94px;
-        position: absolute;
-        left: 0;
-        bottom: 100px;
-      }
     }
   }
 

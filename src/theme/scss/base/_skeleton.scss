@@ -33,14 +33,14 @@
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box; 
-  @include mq(phablet) {
-    max-width: 540px;
-  }
+  // @include mq(phablet) {
+  //   max-width: 540px;
+  // }
   @include mq(tablet) {
     max-width: 720px;
   }
   @include mq("991") {
-    max-width: 1080px;
+    max-width: 1080px;//1160
   }
   @include mq(desktop-wide) {
     max-width: 1455px;

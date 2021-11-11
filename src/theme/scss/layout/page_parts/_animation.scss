@@ -35,16 +35,11 @@
   height: 4px;
   border-radius: 50%;
   background: #FFF;
-  // top: 100px;
-  // left: 400px;
   position: relative;
   transform-origin: 100% 0;
   animation: star-ani 1s infinite ease-out;
   animation-direction: normal;
   opacity: 0;
-  // @include mq (tablet, max) {
-  //   left: 0;
-  // }
   &::after {
     content: '';
     position: absolute;
@@ -60,17 +55,6 @@
   }
 }
 
-
-// .pink {
-//   top: 150px;
-//   left: 500px;
-//   background: #ff5a99;
-//   animation-delay: 1.8s;
-//   &::after {
-//     border-color: transparent transparent transparent #ff5a99;
-//     animation-delay: 1.8s;
-//   }
-// }
 
 @-webkit-keyframes shooting-ani {
   0% {}
