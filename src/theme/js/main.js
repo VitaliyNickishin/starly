@@ -241,4 +241,20 @@ let initStarSky = function () {
 //   });
 // }
 
-
+//counter for benefits
+var stop = $(".hero").offset().top;
+$(window).on('scroll', function() {
+    if ($(window).scrollTop() > stop ) {
+        $(window).off("scroll");
+        $('.count').each(function () {
+            var $this = $(this);
+            jQuery({ Counter: 0 }).animate({ Counter: $this.attr("data-count") }, {
+                duration: 1000,
+                easing: 'swing',
+                step: function () {
+                    $this.text(Math.ceil(this.Counter));
+                }
+            });
+        });
+    };
+});
