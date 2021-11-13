@@ -3,6 +3,7 @@ $(function() {
   headerFixed();
   initSliderRoadmap();
   initStarSky();
+  initAos();
   // initParticlesJS();
 
   
@@ -70,13 +71,22 @@ $(function() {
       overflow: true,
       scale: 1.5
     });
+
+    
+
+
+
 });
 
+let initAos = () => {
+  AOS.init();
+}
+
 /* sticky header */ 
-let headerFixed = function () {
+let headerFixed = () => {
     let header = jQuery('.header');
     
-	$(window).on('scroll', function () {
+	$(window).on('scroll', () => {
 		if ($(this).scrollTop() > 50) {
 			header.addClass('fixed');
 		} else {
@@ -87,7 +97,7 @@ let headerFixed = function () {
 }
 
 //sleder Roadmap
-let initSliderRoadmap = function () {
+let initSliderRoadmap = () => {
   const roadmapSlider = $('.roadmap-slider');
   roadmapSlider.slick({
     variableWidth: true,
@@ -121,9 +131,9 @@ let initSliderRoadmap = function () {
 };
 
 //background Star Sky
-let initStarSky = function () {
-  for (var i = 0; i < 100; i++) {
-    var star = '<div class="star-sky" style="animation: twinkle '+((Math.random()*5) + 5)+'s linear '+((Math.random()*5) + 5)+'s infinite; top: '+Math.random()*$(window).height()+'px; left: '+Math.random()*$(window).width()+'px;"></div>';
+let initStarSky = () => {
+  for (let i = 0; i < 100; i++) {
+    let star = '<div class="star-sky" style="animation: twinkle '+((Math.random()*5) + 5)+'s linear '+((Math.random()*5) + 5)+'s infinite; top: '+Math.random()*$(window).height()+'px; left: '+Math.random()*$(window).width()+'px;"></div>';
     $('.hero, .benefits, .best-team, .roadmap').append(star);
   }
 }
