@@ -80,6 +80,8 @@ b,
   @include flex-center;
   height: 60px;
   width: 210px;
+  font-size: 16px;
+  font-family: $medium_font;
   // background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
   background: $white;
   box-shadow: 0px 0px 25px rgba(130, 200, 244, 0.25);

@@ -34,6 +34,10 @@
     bottom: 0;
     z-index: 1;
     animation: shoot-2 1.5s linear infinite;
+    @include mq ("991", max) {
+      width: 36px;
+      height: 43px;
+    }
   }
 
   .content-box-row {
@@ -93,25 +97,25 @@
     &:after {
       content: '';
       background-image: url('../img/coin.png');
-      background-size: 223px 265px;
-      width: 223px;
-      height: 265px;
+      background-size: cover;
+      width: 373px;
+      height: 415px;
       position: absolute;
-      right: 40px;
-      top: -100px;
+      right: -30px;
+      top: -120px;
       z-index: 2;
 
       @include mq ("520", max) {
-        background-size: 123px 145px;
-        width: 123px;
-        height: 145px;
-        right: 16px;
-        top: -30px;
+        width: 213px;
+        height: 235px;
+        right: -25px;
+        top: -50px;
       }
       @include mq (m, max) {
-        background-size: 63px 75px;
-        width: 63px;
-        height: 75px;
+        width: 113px;
+        height: 125px;
+        right: -5px;
+        top: -30px;
       }
     }
   }
