@@ -1,28 +1,19 @@
 $(function() {
 
   headerFixed();
+  mobileBurger();
+  initCountTime();
   initSliderRoadmap();
-  initStarSky();
+  // initStarSky();
   initAos();
+  initCounterNumber();
+  initCoinParallax();
   // initParticlesJS();
-
   
-  // Mobile menu
-  var menuBtn = $('.header').find('.burger'),
-      menuBox = $('.header').find('ul'),
-      menuLink = menuBox.find('a')
-  menuBtn.on('click', function() {
-    menuBtn.toggleClass('active')
-    menuBox.toggleClass('active')
-    $('body').toggleClass('overflow')
-  })
-  menuLink.on('click', function() {
-    menuBtn.removeClass('active')
-    menuBox.removeClass('active')
-    $('body').removeClass('overflow')
-  })
+});
 
-  // Countdown timer
+/* Countdown timer */ 
+let initCountTime = () => {
   var countDownBox = $('#counter'),
       countDownDate = null,
       countDownItems = countDownBox.find('li > span > i'),
@@ -61,27 +52,11 @@ $(function() {
       }
     }, 1000)
   }
-
-
-    var image = document.getElementsByClassName('test');
-    new simpleParallax(image, {
-      delay: 5,
-      transition: 'cubic-bezier(0,0,0,1)',
-      maxTransition: 60,
-      overflow: true,
-      scale: 1.5
-    });
-
-    
-
-
-
-});
-
+}
+/* added smoothness of appearance for section */ 
 let initAos = () => {
   AOS.init();
 }
-
 /* sticky header */ 
 let headerFixed = () => {
     let header = jQuery('.header');
@@ -95,8 +70,23 @@ let headerFixed = () => {
 
 	});
 }
-
-//sleder Roadmap
+// Mobile menu
+let mobileBurger = () => {
+  const menuBtn = $('.header').find('.burger'),
+      menuBox = $('.header').find('ul'),
+      menuLink = menuBox.find('a')
+  menuBtn.on('click', function() {
+    menuBtn.toggleClass('active')
+    menuBox.toggleClass('active')
+    $('body').toggleClass('overflow')
+  })
+  menuLink.on('click', function() {
+    menuBtn.removeClass('active')
+    menuBox.removeClass('active')
+    $('body').removeClass('overflow')
+  })
+}
+/* sleder Roadmap */
 let initSliderRoadmap = () => {
   const roadmapSlider = $('.roadmap-slider');
   roadmapSlider.slick({
@@ -129,13 +119,42 @@ let initSliderRoadmap = () => {
   //     }
   // });
 };
-
-//background Star Sky
+/* background Star Sky */
 let initStarSky = () => {
   for (let i = 0; i < 100; i++) {
     let star = '<div class="star-sky" style="animation: twinkle '+((Math.random()*5) + 5)+'s linear '+((Math.random()*5) + 5)+'s infinite; top: '+Math.random()*$(window).height()+'px; left: '+Math.random()*$(window).width()+'px;"></div>';
     $('.hero, .benefits, .best-team, .roadmap').append(star);
   }
+}
+/* counter for benefits */ 
+let initCounterNumber = () => {
+  var stop = $(".hero").offset().top;
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > stop ) {
+      $(window).off("scroll");
+      $('.count').each(function () {
+        var $this = $(this);
+        jQuery({ Counter: 0 }).animate({ Counter: $this.attr("data-count") }, {
+            duration: 1000,
+            easing: 'swing',
+            step: function () {
+                $this.text(Math.ceil(this.Counter));
+            }
+        });
+      });
+    };
+  });
+}
+/* use parallax for coin in roadmap section */ 
+let initCoinParallax = () => {
+  const image = document.getElementsByClassName('coin-parallax');
+  new simpleParallax(image, {
+    delay: 5,
+    transition: 'cubic-bezier(0,0,0,1)',
+    maxTransition: 60,
+    overflow: true,
+    scale: 1.5
+  });
 }
 
 // let initParticlesJS = function () {
@@ -251,20 +270,4 @@ let initStarSky = () => {
 //   });
 // }
 
-//counter for benefits
-var stop = $(".hero").offset().top;
-$(window).on('scroll', function() {
-    if ($(window).scrollTop() > stop ) {
-        $(window).off("scroll");
-        $('.count').each(function () {
-            var $this = $(this);
-            jQuery({ Counter: 0 }).animate({ Counter: $this.attr("data-count") }, {
-                duration: 1000,
-                easing: 'swing',
-                step: function () {
-                    $this.text(Math.ceil(this.Counter));
-                }
-            });
-        });
-    };
-});
+
