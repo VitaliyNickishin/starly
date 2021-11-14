@@ -5,13 +5,18 @@
   mix-blend-mode: screen;
   width: 100%;
   &-inner {
-    background: url('../img/bg-footer-2.png') no-repeat bottom center;
+    background: url('../img/bg-footer-mobile.png') no-repeat bottom center;
     opacity: 0.25;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
+    @include mq ("376") {
+      background: url('../img/bg-footer-desktop.png') no-repeat bottom center;
+      background-size: cover;
+      
+    }
   }
   &::before {
     content: '';
@@ -31,7 +36,7 @@
     padding-bottom: 1rem;
   }
   .column {
-    z-index: 1;
+    z-index: 2;
   }
   
   
@@ -88,6 +93,7 @@
     top: -190px;
     right: -80px;
     max-width: 870px;
+    z-index: 1;
     @include mq ("1650", max) {
       right: 0;
       max-width: 835px;

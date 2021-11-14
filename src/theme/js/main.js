@@ -4,7 +4,7 @@ $(function() {
   mobileBurger();
   initCountTime();
   initSliderRoadmap();
-  // initStarSky();
+  initStarSky();
   initAos();
   initCounterNumber();
   initCoinParallax();
@@ -122,7 +122,7 @@ let initSliderRoadmap = () => {
 /* background Star Sky */
 let initStarSky = () => {
   for (let i = 0; i < 100; i++) {
-    let star = '<div class="star-sky" style="animation: twinkle '+((Math.random()*5) + 5)+'s linear '+((Math.random()*5) + 5)+'s infinite; top: '+Math.random()*$(window).height()+'px; left: '+Math.random()*$(window).width()+'px;"></div>';
+    let star = '<div class="star-sky" style="animation: twinkle '+((Math.random()*1) + 1)+'s linear '+((Math.random()*1) + 1)+'s infinite; top: '+Math.random()*$(window).height()+'px; left: '+Math.random()*$(window).width()+'px;"></div>';
     $('.hero, .benefits, .best-team, .roadmap').append(star);
   }
 }
@@ -135,7 +135,7 @@ let initCounterNumber = () => {
       $('.count').each(function () {
         var $this = $(this);
         jQuery({ Counter: 0 }).animate({ Counter: $this.attr("data-count") }, {
-            duration: 1000,
+            duration: 2000,
             easing: 'swing',
             step: function () {
                 $this.text(Math.ceil(this.Counter));

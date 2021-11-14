@@ -104,11 +104,12 @@
       right: -30px;
       top: -120px;
       z-index: 2;
-
+      @include mq (tablet, max) {
+        right: -15px;
+      }
       @include mq ("520", max) {
-        width: 213px;
+        width: 203px;
         height: 235px;
-        right: -25px;
         top: -50px;
       }
       @include mq (m, max) {
