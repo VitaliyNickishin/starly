@@ -11,19 +11,20 @@
     background-image: url('../img/coin-pre-sale.png');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 253px;
-    height: 300px;
+    width: 303px;
+    height: 330px;
     position: absolute;
-    right: 270px;
+    right: 240px;
     top: 320px;
     z-index: 2;
     @include mq ("1650", max) {
-      right: 120px;
+      right: 70px;
     }
     @include mq (desktop-wide, max) {
       top: 280px;
-      width: 223px;
-      height: 220px;
+      width: 273px;
+      height: 300px
+
     }
     @include mq (desktop, max) {
       background-image: none;
@@ -99,15 +100,17 @@
       }
       
       &:first-child {
-        padding-right: 177px;
+        width: 438px;
+        max-width: 100%;
         @include mq (desktop-wide, max) {
-          padding-right: 150px;
+          width: 358px;
         }
       }
       &:nth-child(2) {
-        padding-right: 157px;
+        width: 357px;
+        max-width: 100%;
         @include mq (desktop-wide, max) {
-          padding-right: 130px;
+          width: 305px;
         }
       }
       &::before {

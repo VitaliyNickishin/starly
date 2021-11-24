@@ -47,6 +47,9 @@
       font-size: 16px;
       line-height: 19px;
     }
+    @include mq (m, max) {
+      font-size: 15px;
+    }
   }
 }
 //benefits card

@@ -21,7 +21,7 @@
     display: flex;
 
     @include mq (phablet, max) {
-      margin-left: 12px;
+      margin-left: 10px;
     }
 
     @include mq (m, max) {
