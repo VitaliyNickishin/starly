@@ -87,6 +87,7 @@
         margin-top: 16px;
       }
     }
+    
   }
   .img-wrap {
     position: absolute;
@@ -110,7 +111,17 @@
       @include mq (desktop-wide, max) {
         font-size: 1.1rem;
       }
+      @include mq(phablet, max) {
+        font-size: 14px;
+      }
     }
+    ul {
+      @include mq (m, max) {
+        margin-top: 10px;
+      }
+    }
+
+    
   }
   
   &-copyright {
@@ -127,6 +138,7 @@
         @include mq (phablet, max) {
           @include space-between;
         }
+        
         li {
           &:first-child {
             padding-left: 0;
