@@ -1,0 +1,191 @@
+.pre-sale {
+  padding-top: 15px;
+  padding-bottom: 155px;
+  position: relative;
+  @include mq ("991", max) {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+  &:after {
+    content: '';
+    background-image: url('../img/coin-pre-sale.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 253px;
+    height: 300px;
+    position: absolute;
+    right: 270px;
+    top: 230px;
+    z-index: 2;
+    @include mq ("1650", max) {
+      right: 120px;
+    }
+    @include mq (desktop-wide, max) {
+      top: 200px;
+      width: 223px;
+      height: 220px;
+    }
+    @include mq (desktop, max) {
+      background-image: none;
+    }
+    
+  }
+  h2 {
+    margin-bottom: 40px;
+    @include mq (tablet, max) {
+      margin-bottom: 26px;
+    }
+  }
+  p {
+    padding: 3px 0;
+    font-family: $roboto_regular_font;
+    font-size: $large-font-size; //22px;
+    line-height: 1.625rem;//26px
+    @include mq (desktop-wide, max) {
+      font-size: 1rem; //16px
+      line-height: 1.1875rem //19px;
+    }
+  }
+
+  .row-table {
+    padding: 45px 15px;
+    display: flex;
+    border-top: 1px solid #354060;
+    @include mq ("991", max) {
+      padding-right: 0;
+      padding-left: 0;
+      flex-direction: column;
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+  }
+  .row-body-wrap,
+  .row-footer-wrap {
+    p {
+      &:first-child {
+        font-size: 24px;
+        line-height: 28px;
+        color: #BCC9F2;
+
+        @include mq (desktop-wide, max) {
+          font-size: 1.125rem; //18px
+          line-height: 1.3125rem //21px;
+        }
+      }
+
+      &:last-child {
+        margin-top: 8px;
+        font-family: $roboto_bold_font;
+
+        @include mq ("991", max) {
+          margin-top: 0;
+        }
+      }
+    }
+
+  }
+  .row-header {
+    .has-check {
+      padding-left: 33px;
+      font-size: 1.625rem;//26px
+      line-height: 1.875rem;//30px;
+      @include mq (desktop-wide, max) {
+        font-size: 1.25rem;//20px
+        line-height: 1.4375rem//23px;
+      }
+      @include mq ("991", max) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+      
+      &:first-child {
+        padding-right: 177px;
+        @include mq (desktop-wide, max) {
+          padding-right: 150px;
+        }
+      }
+      &:nth-child(2) {
+        padding-right: 157px;
+        @include mq (desktop-wide, max) {
+          padding-right: 130px;
+        }
+      }
+      &::before {
+        width: 16px;
+        height: 14px;
+        top: 10px;
+        background-size: 100%;
+        @include mq (desktop-wide, max) {
+          top: 3px;
+        }
+        @include mq ("991", max) {
+          top: 10px;
+        }
+      }
+    }
+  }
+  .row-body {
+    &-wrap {
+      &:first-child {
+        width: 438px;
+        max-width: 100%;
+        @include mq (desktop-wide, max) {
+          width: 358px;
+        }
+        @include mq ("991", max) {
+          padding-bottom: 24px;
+        }
+      }
+      &:nth-child(2) {
+        width: 357px;
+        max-width: 100%;
+        @include mq (desktop-wide, max) {
+          width: 305px;
+        }
+        @include mq ("991", max) {
+          padding-bottom: 24px;
+        }
+      }
+    }
+  }
+  .row-footer {
+    &-wrap {
+      &:first-child {
+        padding-right: 110px;
+        width: 434px;
+        max-width: 100%;
+        @include space-between;
+        @include mq (desktop-wide, max) {
+          width: 354px;
+        }
+        @include mq ("991", max) {
+          padding-bottom: 24px;
+        }
+      }
+      &:nth-child(2) {
+        width: 360px;
+        max-width: 100%;
+        @include mq (desktop-wide, max) {
+          width: 305px;
+        }
+        @include mq ("991", max) {
+          padding-bottom: 24px;
+        }
+      }
+      &:nth-child(3) {
+        width: 380px;
+        max-width: 100%;
+        @include mq (desktop-wide, max) {
+          width: 300px;
+        }
+      }
+      .time {
+        color: $lemon_color;
+      }
+    }
+    @include mq ("991", max) {
+      border-bottom: 1px solid #354060;
+    }
+  }
+  
+}

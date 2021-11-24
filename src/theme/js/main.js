@@ -4,7 +4,7 @@ $(function() {
   mobileBurger();
   initCountTime();
   initSliderRoadmap();
-  initStarSky();
+  // initStarSky();
   initAos();
   initCounterNumber();
   initCoinParallax();
