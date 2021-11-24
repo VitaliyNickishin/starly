@@ -30,6 +30,9 @@
   .logo {
     display: block;
     width: 132px;
+    @include mq ("991", max) {
+      width: 122px;
+    }
   }
   .nav {
     display: flex;
@@ -67,13 +70,21 @@
       
     }
     .button {
-      margin-left: 140px;
+      margin-left: 150px;
+      @include mq (desktop-wide, max) {
+        margin-left: 50px;
+      }
       @include mq ("991", max) {
         margin-left: 0;
         margin-right: 16px;
-        width: 155px;
+        font-size: 14px;
+        width: 146px;
         height: 44px;
         border-radius: 8px;
+      }
+      @include mq (m, max) {
+        width: 126px;
+        font-size: 12px;
       }
     }
 
@@ -87,6 +98,12 @@
     align-items: center;
     li {
       padding-right: 70px;
+      @include mq (desktop-wide, max) {
+        padding-right: 40px;
+      }
+      @include mq (sm-comp, max) {
+        padding-right: 30px;
+      }
       &:last-child {
         padding-right: 0;
       }

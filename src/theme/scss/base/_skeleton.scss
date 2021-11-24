@@ -150,12 +150,12 @@
     color: $primary_color;
 
     @include mq(desktop-wide, max) {
-      font-size: 2rem;
-      line-height: 2rem;
+      font-size: 2rem;//36px
+      line-height: 2.5rem;//40px
     }
     @include mq(tablet, max) {
-      font-size: 1.25rem;
-      line-height: 1.5rem;
+      font-size: 1.25rem;//20px
+      line-height: 1.5rem;//24px
     }
 
   }
